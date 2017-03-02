@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-       Copyright 2006-2016 the original author or authors.
+       Copyright 2006-2017 the original author or authors.
 
        Licensed under the Apache License, Version 2.0 (the "License");
        you may not use this file except in compliance with the License.
@@ -350,6 +350,18 @@
 
   <description>Parent POM for MyBatis Generator</description>
 
+  <distributionManagement>
+    <repository>
+      <id>internal.repo</id>
+      <name>Xinzhili maven repo</name>
+      <url>http://maven.xzlcorp.com/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>internal.repo.snapshot</id>
+      <name>Xinzhili maven repo</name>
+      <url>http://maven.xzlcorp.com/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
   <scm>
     <url>https://github.com/mybatis/generator</url>
     <connection>scm:git:ssh://github.com/mybatis/generator.git</connection>
