@@ -349,19 +349,7 @@
   </profiles>
 
   <description>Parent POM for MyBatis Generator</description>
-
-  <distributionManagement>
-    <repository>
-      <id>internal.repo</id>
-      <name>Xinzhili maven repo</name>
-      <url>http://maven.xzlcorp.com/content/repositories/releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>internal.repo.snapshot</id>
-      <name>Xinzhili maven repo</name>
-      <url>http://maven.xzlcorp.com/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
+  
   <scm>
     <url>https://github.com/mybatis/generator</url>
     <connection>scm:git:ssh://github.com/mybatis/generator.git</connection>
