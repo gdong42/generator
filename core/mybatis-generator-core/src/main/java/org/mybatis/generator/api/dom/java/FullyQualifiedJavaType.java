@@ -185,12 +185,11 @@ public class FullyQualifiedJavaType implements
 
     private String calculateActualImport(String name) {
         String answer = name;
-        if (!this.isArray()) {
-            return answer;
-        }
-        int index = name.indexOf("[");
-        if (index != -1) {
-            answer = name.substring(0, index);
+        if (this.isArray()) {
+            int index = name.indexOf("[");
+            if (index != -1) {
+                answer = name.substring(0, index);
+            }
         }
         return answer;
     }

@@ -93,19 +93,11 @@ public class TopLevelClass extends InnerClass implements CompilationUnit {
                         getType().getPackageName())
                 && !importedType.getShortName().equals(getType().getShortName())) {
             if (importedType.isArray()) {
-                importedTypes.add(new FullyQualifiedJavaType(trimArraySuffix(importedType.getFullyQualifiedName())));
+                importedTypes.add(new FullyQualifiedJavaType(importedType.getFullyQualifiedName()));
             } else {
                 importedTypes.add(importedType);
             }
         }
-    }
-
-    private String trimArraySuffix(String fullyQualifiedName) {
-        int index = fullyQualifiedName.lastIndexOf("[]");
-        if (index != -1) {
-            return fullyQualifiedName.substring(0, index);
-        }
-        return fullyQualifiedName;
     }
 
     /* (non-Javadoc)

@@ -271,4 +271,13 @@ public class FullyQualifiedJavaTypeTest {
         assertFalse(fqjt.isPrimitive());
         assertTrue(fqjt.isArray());
     }
+
+    @Test
+    public void testComplexArrayWithoutGenerics() {
+        FullyQualifiedJavaType fqjt = new FullyQualifiedJavaType("java.util.List[]");
+        assertFalse(fqjt.isPrimitive());
+        assertTrue(fqjt.isArray());
+        assertTrue(fqjt.getImportList().contains("java.util.List"));
+        assertFalse(fqjt.getImportList().contains("java.util.List[]"));
+    }
 }
